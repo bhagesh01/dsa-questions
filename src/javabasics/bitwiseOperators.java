@@ -9,7 +9,7 @@ package javabasics;
 // right shift (>>)
 public class bitwiseOperators {
     public static void main(String[] args) {
-        int p=9 , q = 10;
+        int p=11 , q = 13;
 
         System.out.println(p | q);
         System.out.println(q & q);

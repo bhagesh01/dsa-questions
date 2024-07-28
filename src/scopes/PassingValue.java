@@ -13,6 +13,5 @@ public class PassingValue {
         // there occur no change in value because the java uses pass by value method where the changeValue(a) creates a new "a" which dosen't allow change in value.
         // if we have passed by reference {where we pass the address of the value} then the value changes.
 
-
     }
 }
