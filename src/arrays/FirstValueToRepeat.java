@@ -4,14 +4,28 @@ public class FirstValueToRepeat {
     static int RepeatingNumber(int[] arr){
      int num = -1;
      int n = arr.length;
-     for(int i=0;i<n;i++){
-         for(int j =i+1;j<n;j++){
-             if(arr[i] == arr[j]){
-                 num  = arr[i];
-                 break;
-             }
-         }
-     }
+     // TC = O(N^2) && SC = O(1)
+//     for(int i=0;i<n;i++){
+//         for(int j =i+1;j<n;j++){
+//             if(arr[i] == arr[j]){
+//                 num  = arr[i];
+//                 break;
+//             }
+//         }
+//     }
+
+
+        // better time complexity
+        // TC = O(n) && SC = O(1)
+        HashSet<Integer> set  = new HashSet<>();
+        for (int j : arr) {
+            if (set.contains(j)) {
+                num = j;
+                break;
+            } else {
+                set.add(j);
+            }
+        }
      return num;
     }
     public static void main(String[] args) {
