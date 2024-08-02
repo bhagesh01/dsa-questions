@@ -13,6 +13,9 @@ public class ReversingArray {
         for(int i=0;i<size;i++) {
             arr1[i] = sc.nextInt();
         }
+
+
+
         int n = arr1.length;
         int i = 0; int j = n-1;
         while (i < j){
