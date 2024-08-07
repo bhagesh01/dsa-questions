@@ -9,9 +9,12 @@ public class ReturnTheSquaresOfElem {
         int j = n-1;
 
         while(i<j){
-            int temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
+//            int temp = arr[i];
+//            arr[i] = arr[j];
+//            arr[j] = temp;
+            arr[i] = arr[i] + arr[j];
+            arr[j] = arr[i] - arr[j];
+            arr[i] = arr[i] - arr[j];
             i++;
             j--;
         }
