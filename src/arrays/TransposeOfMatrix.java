@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class TransposeOfMatrix {
 
+
+
+//    without inplace
     static void TrnasposeMatrix(int[][] matrix ,int r ,int c){
 
         int[][] trans = new int[r][c];
@@ -18,6 +21,27 @@ public class TransposeOfMatrix {
         for(int i=0;i<r;i++){
             for(int j=0;j<c;j++){
                 System.out.print(trans[i][j] + " ");
+            }
+            System.out.println(" ");
+        }
+    }
+
+    // with inplace
+    static void TrnasposeMatrixInplace(int[][] matrix ,int r ,int c){
+
+        for(int i=0;i<r;i++){
+            for(int j=i;j<c;j++){
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = temp;
+            }
+        }
+
+        System.out.println("this is the resulatant matrix: ");
+
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++){
+                System.out.print(matrix[i][j] + " ");
             }
             System.out.println(" ");
         }
@@ -39,8 +63,8 @@ public class TransposeOfMatrix {
             }
         }
 
-        TrnasposeMatrix(matrix ,r ,c);
-
+//        TrnasposeMatrix(matrix ,r ,c);
+        TrnasposeMatrixInplace(matrix ,r ,c);
 
 
 
