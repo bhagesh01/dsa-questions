@@ -2,31 +2,50 @@ package arrays;
 import java.util.*;
 
 public class AddTwoMatrices {
+    static void addingMatrices(int[][] arr1 , int[][] arr2 , int r , int c){
+        int[][] result = new int[r][c];
+
+
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++) {
+                result[i][j] = arr1[i][j] + arr2[i][j];
+            }
+        }
+
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++){
+                System.out.print(result[i][j] + " ");
+            }
+            System.out.println(" ");
+        }
+
+
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-//        System.out.println("Enter the size of row of the array :");
-//        int x = sc.nextInt();
-//        System.out.println("Enter the size of column of the array :");
-//        int y = sc.nextInt();
-//
-//        int[][] arr = new int[x][y];
-//
-//
+        System.out.println("Enter the size of the row: ");
+        int r = sc.nextInt();
+        System.out.println("Enter the size of the column: ");
+        int c = sc.nextInt();
 
 
-        int[][] a={{1,3,4},{2,4,3},{3,4,5},{8,7,2}};
-        int[][] b={{1,3,4},{2,4,3},{1,2,4},{9,2,5}};
+        int[][] matrix1 = new int[r][c];
+        int[][] matrix2 = new int[r][c];
 
-//creating another matrix to store the sum of two matrices
-        int[][] c=new int[4][4];  //3 rows and 3 columns
-
-//adding and printing addition of 2 matrices
-        for(int i=0;i<3;i++){
-            for(int j=0;j<3;j++){
-                c[i][j]=a[i][j]+b[i][j];    //use - for subtraction
-                System.out.print(c[i][j]+" ");
+        System.out.println("enter the elements of matrix 1 : ");
+        for(int i=0;i<r;i++){
+            for(int j=0; j<c;j++){
+                matrix1[i][j] = sc.nextInt();
             }
-            System.out.println();//new line
         }
+
+        System.out.println("enter the elements of matrix 2 : ");
+        for(int i=0;i<r;i++){
+            for(int j=0; j<c;j++){
+                matrix2[i][j] = sc.nextInt();
+            }
+        }
+
+        addingMatrices(matrix1 , matrix2 ,r ,c);
     }
 }
