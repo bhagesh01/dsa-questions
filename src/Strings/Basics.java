@@ -52,11 +52,11 @@ public class Basics {
         // or
 //        System.out.println(sentence.substring(8));
 //        System.out.println(sentence.substring(0));
-
-
-        String s1 = "hello";
-        String s2 = "hello";
-        String s3 = new String("hello");
+//
+//
+//        String s1 = "hello";
+//        String s2 = "hello";
+//        String s3 = new String("hello");
 //        System.out.println(s1 == s3);// false == different address
 //        System.out.println(s1==s2); // true === same address
 
@@ -66,6 +66,14 @@ public class Basics {
         // then it checks the value of the string.
 
 
+        String str = " Hello World ";
+//        System.out.println(str.trim());
+        String[] words = str.split("\\W+");
+
+//        for(String e : words){
+//            System.out.print(e + "///");
+//        }
+        System.out.println( words.length);;
 
 
 
