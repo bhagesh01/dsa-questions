@@ -85,17 +85,39 @@ public class InsertInto {
 
         void deleteElem(int index){
              Node temp = head;
-             Node newNode = null;
-             for(int i=0;i<index-1;i++){
+             if(index > size()){
+                 System.out.println("Index is out of bounds.");
+                 return;
+             }
+             for(int i=0;i<index-2;i++){
+                 temp = temp.next;
+             }
+
+             if(head == null){
+                 System.out.println("list is empty {pehle se he khali aur kitna delete kru}");
+                 return;
+             }
+             else if(index == 0){
+                 head = temp.next;
+             }
+             else if(index == size()){
+                 tail = temp;
+             }
+             temp.next  = temp.next.next;
+        }
+
+        void getelem(int index){
+             Node temp = head;
+             if(index>size() && index<0){
+                 System.out.println("Index given is out of bounds. or worng index given");
+             }
+             for(int i=0;i<index;i++){
                  temp = temp.next;
              }
              if(head == null){
-                 System.out.println("list is empty {pehle se he khali list hae}");
+                 System.out.println("The list is empty");
              }
-             temp.next  = temp.next.next;
-
-
-
+            System.out.println("The element is " + temp.data + " at " + index+"th position");
 
         }
 
@@ -106,22 +128,29 @@ public class InsertInto {
         linkedList l1 = new linkedList();
         Scanner sc = new Scanner(System.in);
 //        int num = Integer.MIN_VALUE;
-        for(int i=0;i<3;i++){
+        for(int i=0;i<5;i++){
 //            num = (int)(Math.random() * 100);
             System.out.println("Enter the element to insert : ");
             int num = sc.nextInt();
             l1.insertAtEnd(num);
         }
 
-        l1.display();
-        l1.size();
+//        l1.display();
+//        l1.size();
 //        l1.insertAtBegging(1000);
 //        l1.display();
 //        l1.size();
 
 
-        l1.insertInBetween(4,999);
-        l1.display();
+//        l1.insertInBetween(4,999);
+//        l1.display();
+
+//        l1.deleteElem(44);
+        l1.getelem(3);
+//        l1.display();
+//        System.out.println();
+//        System.out.println("This is  the tail data: "+l1.tail.data);
+//        System.out.println("This is  the tail data: "+l1.head.data);
 //        l1.size();
 //
 //        System.out.println(l1.tail.data);
