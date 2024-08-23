@@ -66,16 +66,22 @@ public class Basics {
         // then it checks the value of the string.
 
 
-        String str = " Hello World ";
-//        System.out.println(str.trim());
-        String[] words = str.split("\\W+");
+//        String str = " Hello World ";
+////        System.out.println(str.trim());
+//        String[] words = str.split("\\W+");
+//
+////        for(String e : words){
+////            System.out.print(e + "///");
+////        }
+//        System.out.println( words.length);;
 
-//        for(String e : words){
-//            System.out.print(e + "///");
-//        }
-        System.out.println( words.length);;
+//        StringBuilder str = new StringBuilder("Namaste bhai");
+//        System.out.println("string before the delete :" + str);
+//        str.delete(0,str.length());
+//        System.out.println("string before the delete :" + str);
 
 
+        System.out.println((int)'2' - 48);
 
 
 
