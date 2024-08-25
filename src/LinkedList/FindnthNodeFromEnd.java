@@ -22,6 +22,23 @@ public class FindnthNodeFromEnd {
             System.out.println("the node you are looking for is : "+ temp.data);
         }
 
+        void findNthNodeOnetraversal(int index){
+            Node fast = head;
+            Node slow = head ;
+
+            for(int i=0;i<index;i++){
+                fast = fast.next;
+            }
+
+            while(fast != null){
+                slow = slow.next;
+                fast = fast.next;
+            }
+
+            System.out.println("The value of the node is:  "+slow.data);
+
+        }
+
         void insertAtEnd(int val){
             Node rage  = new Node(val);
             if(head == null){
@@ -56,10 +73,13 @@ public class FindnthNodeFromEnd {
             l1.insertAtEnd(num);
         }
 
-        int n = 2;
-        int index = l1.size()-n;
-        l1.findNodeNth(index);
+//        int n = 2;
+//        int index = l1.size()-n;
+//        // this will use two traversals for it .
+////        l1.findNodeNth(index);
 
+
+        l1.findNthNodeOnetraversal(2);
 
 
     }
