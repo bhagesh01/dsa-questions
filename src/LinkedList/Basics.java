@@ -39,13 +39,13 @@ public class Basics {
 //    }
 
     public static void main(String[] args) {
-        Node a = new Node(2);
-        Node b = new Node(6);
-        Node c = new Node(9);
-        Node d = new Node(199);
-        a.next = b;
-        b.next = c;
-        c.next = d;
+//        Node a = new Node(2);
+//        Node b = new Node(6);
+//        Node c = new Node(9);
+//        Node d = new Node(199);
+//        a.next = b;
+//        b.next = c;
+//        c.next = d;
 
 
 
@@ -69,5 +69,11 @@ public class Basics {
 
 
 //        ListDisplayReverse(a);
+
+
+        System.out.println(12%2);
+        System.out.println(12/2);
+        System.out.println(13%2);
+        System.out.println(13/2);
     }
 }
