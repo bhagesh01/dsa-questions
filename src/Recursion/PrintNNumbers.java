@@ -12,5 +12,6 @@ public class PrintNNumbers {
     }
     public static void main(String[] args) {
         printNumbers(10);
+        printNumbers(20);
     }
 }
